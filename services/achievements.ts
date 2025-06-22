@@ -23,6 +23,9 @@ export const getAchievementsData = async ({
 
   const { data, error } = await query;
 
+  console.log("data", data);
+  console.log("error", error);
+
   if (error) {
     throw new Error(error.message);
   }

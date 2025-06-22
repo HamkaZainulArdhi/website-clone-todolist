@@ -13,11 +13,11 @@ const Dashboard = () => {
     <>
       <Contributions endpoint={GITHUB_ACCOUNTS.endpoint} />
       <Breakline className="my-8" />
-      <CodingActive />
+      {/* <CodingActive />
       <Breakline className="my-8" />
-      <Codewars endpoint={CODEWARS_ACCOUNT.endpoint} />
-      <Breakline className="my-8" />
-      <Monkeytype />
+      {/* <Codewars endpoint={CODEWARS_ACCOUNT.endpoint} /> */}
+      {/* <Breakline className="my-8" />
+      <Monkeytype />  */}
     </>
   );
 };

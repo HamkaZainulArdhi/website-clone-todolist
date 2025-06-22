@@ -7,12 +7,14 @@ interface AnimateCounterProps extends HTMLProps<HTMLSpanElement> {
 
 const AnimateCounter = ({ total, ...rest }: AnimateCounterProps) => {
   const countRef = useRef<HTMLSpanElement>(null);
-  const initialCount = 0;
 
   useEffect(() => {
     const count = countRef.current;
 
-    const controls: AnimationPlaybackControls = animate(initialCount, total, {
+    // ⛔ Pastikan elemen sudah ada
+    if (!count) return;
+
+    const controls: AnimationPlaybackControls = animate(0, total, {
       duration: 1,
       onUpdate: (value) => {
         if (count) {

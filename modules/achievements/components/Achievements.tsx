@@ -21,7 +21,7 @@ const Achievements = () => {
   const [filter, setFilter] = useState({
     category: params.get("category") || "",
     search: params.get("search") || "",
-  })
+  });
   const category = params.get("category");
   const search = params.get("search");
 
@@ -40,7 +40,8 @@ const Achievements = () => {
   const filteredAchievements: AchievementItem[] = data
     ?.filter(
       (item: AchievementItem) =>
-        item?.is_show && (!category || item?.category === category),
+        item?.is_show &&
+        (!category || item?.category?.toLowerCase() === category.toLowerCase()),
     )
     .sort((a: AchievementItem, b: AchievementItem) => b.id - a.id);
 

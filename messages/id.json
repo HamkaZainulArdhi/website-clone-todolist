@@ -1,7 +1,7 @@
 {
   "HomePage": {
-    "intro": "Hai, saya Satria Bahari",
-    "location": "Berasal dari Jambi, Indonesia 🇮🇩",
+    "intro": "Hai, saya Hamka Zainul Ardhi",
+    "location": "Berasal dari jawa tengah, Indonesia 🇮🇩",
     "location_type": "Di lokasi",
     "resume": "Insinyur Perangkat Lunak yang bersemangat dan berpengalaman dengan fokus kuat pada pengembangan frontend. Mahir dalam TypeScript dan berpengalaman dalam semua aspek teknologi web. Pemain tim kolaboratif yang berdedikasi untuk memberikan aplikasi web yang efisien, skalabel, dan menarik secara visual.",
     "skills": {
@@ -22,7 +22,7 @@
     "title": "Tentang",
     "description": "Cerita singkat tentang saya",
     "resume": {
-      "paragraf_1": "Halo! Terima kasih telah mengunjungi situs pribadi saya. Saya Satria Bahari, seorang mahasiswa Sistem Informasi di Universitas Jambi. Saya sangat tertarik dengan pengembangan frontend. Dengan dasar yang kuat dalam JavaScript dan TypeScript, serta pemahaman komprehensif tentang berbagai pustaka dan kerangka kerja frontend, saya telah menjelajahi lanskap pengembangan web yang selalu berkembang dengan antusiasme dan dedikasi.",
+      "paragraf_1": "Halo! Terima kasih telah mengunjungi situs pribadi saya. Saya Hamka Zainul Ardhi, seorang mahasiswa Sistem Informasi di Universitas Telkom. Saya sangat tertarik dengan pengembangan frontend. Dengan dasar yang kuat dalam JavaScript dan TypeScript, serta pemahaman komprehensif tentang berbagai pustaka dan kerangka kerja frontend, saya telah menjelajahi lanskap pengembangan web yang selalu berkembang dengan antusiasme dan dedikasi.",
 
       "paragraf_2": "Saya fokus pada pembuatan aplikasi web yang tidak hanya memberikan pengalaman yang akurat tetapi juga ramah pengguna. Spesialisasi saya meliputi JavaScript dan TypeScript, bersama dengan kerangka kerja seperti React, Vite, dan Next.js. Sebagai pembelajar cepat dan pemikir adaptif, saya berkembang dalam lingkungan dinamis di mana inovasi adalah kekuatan pendorong. Sifat kolaboratif saya memungkinkan saya untuk berintegrasi dengan tim, tidak hanya menyumbangkan keterampilan teknis saya tetapi juga memiliki sikap rendah hati yang menghargai masukan dari setiap anggota tim.",
 
@@ -33,66 +33,67 @@
       "sub_title": "Perjalanan karier profesional saya.",
       "careers": {
         "career_0": {
-          "position": "Kepala Teknologi di Divisi Riset dan Teknologi",
-          "company": "Himpunan Mahasiswa Sistem Informasi Universitas Jambi (HIMASI UNJA)",
-          "logo": "/images/careers/himasi-unja.jpeg",
-          "location": "Jambi, Indonesia 🇮🇩",
-          "location_type": "Di Tempat",
-          "type": "Paruh Waktu",
-          "start_date": "2024-01",
+          "position": "Web Developer",
+          "company": "PT. Presmas Digital Akademik",
+          "logo": "/images/careers/presmas.jpeg",
+          "location": "Jawa Tengah, Indonesia 🇮🇩",
+          "location_type": "Onsite",
+          "type": "Magang",
+          "start_date": "2025-01",
           "end_date": null,
-          "industry": "sekolah",
-          "link": "https://himasi.unja.ac.id/"
+          "industry": "Akademik",
+          "link": "#"
         },
         "career_1": {
-          "position": "Kohort Pengembangan Mobile",
-          "company": "Bangkit Academy yang dipimpin oleh Google, Tokopedia, Gojek & Traveloka",
-          "logo": "/images/careers/bangkit.png",
-          "location": "Bandung, Indonesia 🇮🇩",
-          "location_type": "Jarak Jauh",
-          "type": "Paruh Waktu",
-          "start_date": "2024-12",
-          "end_date": "2025-12",
-          "industry": "sekolah",
-          "link": "https://grow.google/intl/id_id/bangkit/?tab=mobile-development",
+          "position": "Frontend Web Developer",
+          "company": "Desa Wisata Antap",
+          "logo": "/images/careers/antap.png",
+          "location": "Banyumas, Indonesia 🇮🇩",
+          "location_type": "Remote",
+          "type": "Paruh waktu",
+          "start_date": "2024-9",
+          "end_date": "2025-11",
+          "industry": "Pariwisata",
+          "link": "#",
           "responsibilities": {
-            "responsibility_1": "Menguasai pengembangan Android menggunakan Kotlin, Komponen Jetpack, dan alat modern seperti Room Database dan DataStore untuk manajemen status dan data.",
-            "responsibility_2": "Mendapatkan pengalaman langsung dengan ViewModel, RecyclerView, dan Hilt untuk injeksi ketergantungan untuk membuat aplikasi mobile yang kuat dan dapat diskalakan.",
-            "responsibility_3": "Berkolaborasi dengan tim lintas fungsi untuk mengembangkan Proyek Capstone Berbasis Perusahaan, menerapkan metodologi Agile dan pemecahan masalah dunia nyata.",
-            "responsibility_4": "Meningkatkan keterampilan kerja tim, pemecahan masalah, dan komunikasi dalam lingkungan multikultural."
+            "responsibility_1": "Mengembangkan antarmuka web yang responsif dan ramah pengguna untuk platform digital Desa Wisata Antap menggunakan HTML, CSS, JavaScript, dan framework frontend modern.",
+            "responsibility_2": "Berkoordinasi dengan tim desain dan backend untuk memastikan pengalaman pengguna yang mulus dan integrasi API serta konten CMS yang efisien.",
+            "responsibility_3": "Melakukan pemeliharaan dan optimasi performa website agar kompatibel di berbagai perangkat dan peramban, dengan fokus pada aksesibilitas dan kemudahan penggunaan.",
+            "responsibility_4": "Berkontribusi dalam upaya branding visual dan promosi digital desa wisata melalui elemen UI yang interaktif dan menarik."
           }
         },
         "career_2": {
-          "position": "Pengembang Mobile",
-          "company": "Pt. Amanah Karya Indonesia (Amanah Corp)",
-          "logo": "/images/careers/amanah-karya-indonesia.jpeg",
-          "location": "Depok, Indonesia 🇮🇩",
-          "location_type": "Jarak Jauh",
-          "type": "Magang",
+          "position": "Tim Reviewer Puspresnas",
+          "company": "Satria Muda Telkom University Purwokerto",
+          "logo": "/images/careers/satmud.png",
+          "location": "Purwokerto, Indonesia 🇮🇩",
+          "location_type": "Onsite",
+          "type": "Penuh waktu",
           "start_date": "2024-12",
           "end_date": "2025-12",
-          "industry": "sekolah",
-          "link": "https://amanahcorp.co.id/",
+          "industry": "Akademik",
+          "link": "#",
           "responsibilities": {
-            "responsibility_1": "Merancang dan mengembangkan aplikasi mobile menggunakan Kotlin, menggabungkan Room Database, Hilt, dan ViewModel untuk kinerja dan skalabilitas yang optimal.",
-            "responsibility_2": "Menerapkan fitur yang aman dan ramah pengguna yang disesuaikan dengan platform berbagi.link untuk meningkatkan keterlibatan dan aksesibilitas pengguna.",
-            "responsibility_3": "Bekerja sama dengan PT Amanah Corp untuk memastikan keselarasan dengan tujuan bisnis dan memberikan solusi dunia nyata yang berdampak.",
-            "responsibility_4": "Memperkuat keterampilan teknis dan keterampilan lunak, termasuk pemecahan masalah, kerja tim, dan komunikasi, dalam lingkungan profesional yang multikultural."
+            "responsibility_1": "Mengevaluasi proposal proyek mahasiswa untuk program nasional seperti PKM dan P2MW berdasarkan inovasi, kelayakan, dan dampak akademik.",
+            "responsibility_2": "Memberikan masukan terstruktur dan rekomendasi untuk meningkatkan kualitas, kejelasan, dan kesesuaian proposal dengan standar Puspresnas.",
+            "responsibility_3": "Berkoordinasi dengan rekan akademik untuk memastikan penilaian yang adil dan konsisten di berbagai bidang studi.",
+            "responsibility_4": "Meningkatkan keterampilan berpikir kritis dan analisis tulisan akademik melalui peninjauan berbagai pengajuan mahasiswa."
           }
         }
       }
     },
+
     "education": {
       "title": "Pendidikan",
       "sub_title": "Perjalanan pendidikan saya.",
-      "school": "Universitas Jambi",
+      "school": "Universitas Telkom Purwokerto",
       "major": "Sistem Informasi, (S.Kom)",
-      "logo": "/images/education/unja.png",
-      "location": "Jambi, Indonesia 🇮🇩",
+      "logo": "/images/education/telkom.png",
+      "location": "Jawa Tengah, Indonesia 🇮🇩",
       "degree": "Gelar Sarjana",
-      "start_year": 2022,
-      "end_year": 2026,
-      "link": "https://www.unja.ac.id"
+      "start_year": 2023,
+      "end_year": 2027,
+      "link": "https://purwokerto.telkomuniversity.ac.id/"
     },
     "resume_download_button": "Unduh Resume",
     "portfolio_download_button": "Unduh Portofolio"

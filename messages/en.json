@@ -1,7 +1,7 @@
 {
   "HomePage": {
-    "intro": "Hi, I'm Satria Bahari",
-    "location": "Based in Jambi, Indonesia 🇮🇩",
+    "intro": "Hi, I'm Hamka Zainul Ardhi",
+    "location": "Based in Central Java, Indonesia 🇮🇩",
     "location_type": "Onsite",
     "resume": "Passionate and seasoned Software Engineer with a strong focus on frontend development. Proficient in TypeScript and well-versed in all aspects of web technologies. Collaborative team player dedicated to delivering efficient, scalable, and visually appealing web applications.",
     "skills": {
@@ -22,7 +22,7 @@
     "title": "About",
     "description": "A short story of me",
     "resume": {
-      "paragraf_1": "Hello there! Thank you for visiting my personal website. I'm Satria Bahari, a student majoring in Information Systems at the University of Jambi. I have a strong interest in frontend development. With a solid foundation in JavaScript and TypeScript, as well as a comprehensive understanding of various frontend libraries and frameworks, I have navigated the ever-evolving landscape of web development with enthusiasm and dedication.",
+      "paragraf_1": "Hello there! Thank you for visiting my personal website. I'm Hamka Zainul Ardhi, a student majoring in Information Systems at the Telkom University. I have a strong interest in frontend development. With a solid foundation in JavaScript and TypeScript, as well as a comprehensive understanding of various frontend libraries and frameworks, I have navigated the ever-evolving landscape of web development with enthusiasm and dedication.",
 
       "paragraf_2": "I focus on creating web applications that not only provide precise experiences but are also user-friendly. My specialization includes JavaScript and TypeScript, along with frameworks such as React, Vite, and Next.js. As a quick learner and adaptive thinker, I thrive in a dynamic environment where innovation is a driving force. My collaborative nature allows me to seamlessly integrate with teams, contributing not only to my technical skills but also embodying a humble attitude that values input from every team member.",
 
@@ -33,51 +33,51 @@
       "sub_title": "My professional career journey.",
       "careers": {
         "career_0": {
-          "position": "Head of Technology in the Research and Technology Division",
-          "company": "Himpunan Mahasiswa Sistem Informasi Universitas Jambi (HIMASI UNJA)",
-          "logo": "/images/careers/himasi-unja.jpeg",
-          "location": "Jambi, Indonesia 🇮🇩",
+          "position": "Web Developer",
+          "company": "PT. Presmas Digital Akademik",
+          "logo": "/images/careers/presmas.jpeg",
+          "location": "Central java, Indonesia 🇮🇩",
           "location_type": "Onsite",
-          "type": "Part-time",
-          "start_date": "2024-01",
+          "type": "Internship",
+          "start_date": "2025-01",
           "end_date": null,
-          "industry": "school",
-          "link": "https://himasi.unja.ac.id/"
+          "industry": "Academic",
+          "link": "#"
         },
         "career_1": {
-          "position": "Mobile Development Cohort",
-          "company": "Bangkit Academy led by Google, Tokopedia, Gojek & Traveloka",
-          "logo": "/images/careers/bangkit.png",
-          "location": "Bandung, Indonesia 🇮🇩",
+          "position": "Frontend Web Developer",
+          "company": "Antap Tourism Village",
+          "logo": "/images/careers/antap.png",
+          "location": "Banyumas, Indonesia 🇮🇩",
           "location_type": "Remote",
           "type": "Part-time",
-          "start_date": "2024-12",
-          "end_date": "2025-12",
-          "industry": "school",
-          "link": "https://grow.google/intl/id_id/bangkit/?tab=mobile-development",
+          "start_date": "2024-9",
+          "end_date": "2025-11",
+          "industry": "tourism",
+          "link": "#",
           "responsibilities": {
-            "responsibility_1": "Mastered Android development using Kotlin, Jetpack Components, and modern tools like Room Database and DataStore for state and data management.",
-            "responsibility_2": "Gained hands-on experience with ViewModel, RecyclerView, and Hilt for dependency injection to create robust and scalable mobile applications.",
-            "responsibility_3": "Collaborated with a cross-functional team to develop a Company-Based Capstone Project, applying Agile methodologies and real-world problem-solving.",
-            "responsibility_4": "Enhanced teamwork, problem-solving, and communication skills in a multicultural environment."
+            "responsibility_1": "Developed responsive and user-friendly web interfaces for Antap Tourism Village’s digital platform using HTML, CSS, JavaScript, and modern frontend frameworks.",
+            "responsibility_2": "Collaborated with the design and backend teams to ensure seamless user experience and efficient integration of APIs and CMS content.",
+            "responsibility_3": "Maintained and optimized website performance, ensuring compatibility across devices and browsers, with focus on accessibility and usability.",
+            "responsibility_4": "Contributed to the visual branding and digital promotion efforts of the tourism village through interactive and engaging UI components."
           }
         },
         "career_2": {
-          "position": "Mobile Developer",
-          "company": "Pt. Amanah Karya Indonesia (Amanah Corp)",
-          "logo": "/images/careers/amanah-karya-indonesia.jpeg",
-          "location": "Depok, Indonesia 🇮🇩",
-          "location_type": "Remote",
-          "type": "Internship",
+          "position": "Team Reviewer Puspresnas",
+          "company": "Satria Muda Telkom University Purwokerto",
+          "logo": "/images/careers/satmud.png",
+          "location": "Purwokerto, Indonesia 🇮🇩",
+          "location_type": "Onsite",
+          "type": "Full-time",
           "start_date": "2024-12",
           "end_date": "2025-12",
-          "industry": "school",
-          "link": "https://amanahcorp.co.id/",
+          "industry": "Academic",
+          "link": "#",
           "responsibilities": {
-            "responsibility_1": "Designed and developed a mobile application using Kotlin, incorporating Room Database, Hilt, and ViewModel for optimal performance and scalability.",
-            "responsibility_2": "Implemented secure and user-friendly features tailored to the berbagi.link platform to improve user engagement and accessibility.",
-            "responsibility_3": "Worked closely with PT Amanah Corp to ensure alignment with business objectives and deliver impactful, real-world solutions.",
-            "responsibility_4": "Strengthened technical and soft skills, including problem-solving, teamwork, and communication, in a professional, multicultural setting."
+            "responsibility_1": "Evaluated student project proposals for national programs (such as PKM and P2MW) based on innovation, feasibility, and academic impact.",
+            "responsibility_2": "Provided structured feedback and recommendations to improve proposal quality, clarity, and alignment with Puspresnas standards.",
+            "responsibility_3": "Collaborated with academic peers to ensure fair and consistent assessment across various fields of study.",
+            "responsibility_4": "Strengthened critical thinking and academic writing analysis skills through engagement with diverse student submissions."
           }
         }
       }
@@ -85,14 +85,14 @@
     "education": {
       "title": "Education",
       "sub_title": "My educational journey.",
-      "school": "Jambi University",
-      "major": "Information Systems, (S.Kom)",
-      "logo": "/images/education/unja.png",
-      "location": "Jambi, Indonesia 🇮🇩",
-      "degree": "Bachelor's degree",
-      "start_year": 2022,
-      "end_year": 2026,
-      "link": "https://www.unja.ac.id"
+      "school": "Telkom University Purwokerto",
+      "major": "Infomation System, (S.Kom)",
+      "logo": "/images/education/telkom.png",
+      "location": "Central java, Indonesia 🇮🇩",
+      "degree": "Bachelor's Degree",
+      "start_year": 2023,
+      "end_year": 2027,
+      "link": "https://purwokerto.telkomuniversity.ac.id/"
     },
     "resume_download_button": "Download Resume",
     "portfolio_download_button": "Download Portfolio"
