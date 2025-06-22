@@ -12,10 +12,6 @@ export const CAREERS: CareerProps[] = [
     end_date: null,
     industry: "academy",
     link: "#",
-    // responsibilities: [
-    //   "Developed and managed a portfolio website showcasing my best work and achievements as a Web Developer. The website emphasizes professional design and easy navigation for an optimal user experience",
-    //   "Designed user interfaces with professional, responsive designs for both mobile and desktop devices, ensuring easy navigation for an optimal user experience",
-    // ],
   },
   {
     position: "Frontend Web Developer",
