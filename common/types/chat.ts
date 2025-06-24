@@ -12,6 +12,7 @@ export interface MessageProps {
 
 export interface ChatListProps {
   messages: MessageProps[];
+  isWidget?: boolean;
 }
 
 export interface ChatInputProps {

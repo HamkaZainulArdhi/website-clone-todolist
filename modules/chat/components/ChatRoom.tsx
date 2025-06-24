@@ -1,136 +1,116 @@
 "use client";
 
-import useSWR from "swr";
-import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
-import { useEffect, useState } from "react";
-import { useSession } from "next-auth/react";
+import { useState, useCallback } from "react";
 
-import ChatAuth from "./ChatAuth";
 import ChatInput from "./ChatInput";
 import ChatList from "./ChatList";
-import ChatItemSkeleton from "./ChatItemSkeleton";
 
 import { MessageProps } from "@/common/types/chat";
-import { fetcher } from "@/services/fetcher";
-import { createClient } from "@/common/utils/client";
 import useNotif from "@/hooks/useNotif";
 
 export const ChatRoom = ({ isWidget = false }: { isWidget?: boolean }) => {
-  const { data, isLoading } = useSWR("/api/chat", fetcher);
-
   const [messages, setMessages] = useState<MessageProps[]>([]);
-  const [isReply, setIsReply] = useState({ is_reply: false, name: "" });
-
-  const { data: session } = useSession();
-
-  const supabase = createClient();
+  const [isTyping, setIsTyping] = useState(false);
 
   const notif = useNotif();
 
-  const handleClickReply = (name: string) => {
-    if (!session?.user) return notif("Please sign in to reply");
-    setIsReply({ is_reply: true, name });
-  };
-
-  const handleCancelReply = () => {
-    setIsReply({ is_reply: false, name: "" });
-  };
-
-  const handleSendMessage = async (message: string) => {
-    const messageId = uuidv4();
-    const newMessageData = {
-      id: messageId,
-      name: session?.user?.name,
-      email: session?.user?.email,
-      image: session?.user?.image,
-      message,
-      is_reply: isReply.is_reply,
-      reply_to: isReply.name,
+  const createMessage = useCallback(
+    (props: Partial<MessageProps>): MessageProps => ({
+      id: uuidv4(),
+      name: "",
+      email: "",
+      image: "",
+      message: "",
+      is_reply: false,
+      reply_to: "",
       is_show: true,
       created_at: new Date().toISOString(),
-    };
+      ...props,
+    }),
+    [],
+  );
+
+  const handleSendMessage = async (message: string) => {
+    if (!message.trim()) return;
+
+    const userMessage = createMessage({
+      name: "User",
+      image: "/user.png",
+      message,
+    });
+
+    setMessages((prev) => [...prev, userMessage]);
+    setIsTyping(true);
+
     try {
-      await axios.post("/api/chat", newMessageData);
-      notif("Successfully to send message");
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message: message, // kirim pesan user saja
+        }),
+      });
+
+      const data = await res.json();
+
+      const botReply =
+        data?.choices?.[0]?.message?.content ||
+        data?.data?.choices?.[0]?.message?.content ||
+        data?.message ||
+        "Maaf, saya tidak dapat memproses permintaan Anda saat ini.";
+
+      const botMessage = createMessage({
+        name: "Chatbot AI",
+        image: "/bot.png",
+        message: botReply,
+        is_reply: true,
+        reply_to: userMessage.id,
+      });
+
+      setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
-      console.error("Error:", error);
-      notif("Failed to send message");
+      console.error("Fetch error:", error);
+      notif("Gagal menghubungi AI. Silakan coba lagi nanti.");
+
+      const errorMessage = createMessage({
+        name: "Chatbot AI",
+        image: "/bot.png",
+        message: "Maaf, terjadi kesalahan. Silakan coba lagi nanti.",
+        is_reply: true,
+        reply_to: userMessage.id,
+      });
+
+      setMessages((prev) => [...prev, errorMessage]);
     }
+    setIsTyping(false);
   };
 
-  const handleDeleteMessage = async (id: string) => {
-    try {
-      await axios.delete(`/api/chat/${id}`);
-      notif("Successfully to delete message");
-    } catch (error) {
-      notif("Failed to delete message");
-    }
-  };
-
-  useEffect(() => {
-    if (data) setMessages(data);
-  }, [data]);
-
-  useEffect(() => {
-    const channel = supabase
-      .channel("realtime chat")
-      .on(
-        "postgres_changes",
-        {
-          event: "INSERT",
-          schema: "public",
-          table: "messages",
-        },
-        (payload) => {
-          setMessages((prevMessages) => [
-            ...prevMessages,
-            payload.new as MessageProps,
-          ]);
-        },
-      )
-      .on(
-        "postgres_changes",
-        {
-          event: "DELETE",
-          schema: "public",
-          table: "messages",
-        },
-        (payload) => {
-          setMessages((prevMessages) =>
-            prevMessages.filter((msg) => msg.id !== payload.old.id),
-          );
-        },
-      )
-      .subscribe();
-
-    return () => {
-      supabase.removeChannel(channel);
-    };
-  }, [supabase]);
+  const handleCancelReply = useCallback(() => {
+    // Placeholder for future implementation
+  }, []);
 
   return (
-    <>
-      {isLoading ? (
-        <ChatItemSkeleton />
-      ) : (
-        <ChatList
-          messages={messages}
-          onDeleteMessage={handleDeleteMessage}
-          onClickReply={handleClickReply}
-          isWidget={isWidget}
-        />
-      )}
-      {session ? (
+    <div className="flex h-full flex-col ">
+      <div className="flex-1 ">
+        <ChatList messages={messages} isWidget={isWidget} />
+      </div>
+
+      {/* Area pengetikan bot dengan tinggi tetap */}
+      <div className="min-h-[32px] p-2 text-sm italic text-gray-500">
+        <span className={isTyping ? "visible" : "invisible"}>
+          Chatbot AI sedang mengetik...
+        </span>
+      </div>
+
+      <div className="w-full">
         <ChatInput
           onSendMessage={handleSendMessage}
+          replyName=""
           onCancelReply={handleCancelReply}
-          replyName={isReply.name}
           isWidget={isWidget}
         />
-      ) : (
-        <ChatAuth isWidget={isWidget} />
-      )}
-    </>
+      </div>
+    </div>
   );
 };

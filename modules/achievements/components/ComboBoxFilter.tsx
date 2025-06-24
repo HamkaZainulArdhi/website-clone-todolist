@@ -16,11 +16,19 @@ interface dataComboBox {
 const data: dataComboBox[] = [
   {
     label: "Certificate",
-    value: "certificate",
+    value: "Certificate",
   },
   {
     label: "Badge",
-    value: "badge",
+    value: "Badge",
+  },
+  {
+    label: "Internship",
+    value: "Internship",
+  },
+  {
+    label: "Campionship",
+    value: "Champions",
   },
 ];
 

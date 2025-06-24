@@ -27,19 +27,23 @@ model achievements {
   category         String?     // kamu perlu tambahkan ini di Supabase agar sesuai
   createdAt        DateTime    @default(now())
   updatedAt        DateTime    @updatedAt
+  is_show Boolean @default(true)
 }
 
 
 
-model Projects {
-  id           String   @id @default(cuid())
+model projects {
+  id           Int      @id @default(autoincrement())
   title        String
   slug         String   @unique
   description  String
   image        String
-  stacks       String[] // array of string, bisa disimpan langsung di PostgreSQL
+  link_demo    String?  // opsional
+  link_github  String?  // opsional
+  stacks       String[] // array of strings
+  content      String?  // opsional
+  is_show      Boolean  @default(true)
   is_featured  Boolean  @default(false)
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
 }
+
 

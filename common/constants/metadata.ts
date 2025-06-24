@@ -1,16 +1,17 @@
 export const METADATA = {
-  creator: "Satria Bahari",
+  creator: "Hamka Zainul Ardhi",
   description: "Personal website, portfolio, blog",
-  keyword: "satria, satria bahari",
+  keyword:
+    "hamka, hamka zainul ardh, hamka zainul ardhi, hamka zainul, hamka ardhi, hamka id, hamka indonesia, software engineer, frontend developer, web developer, personal website, portfolio, blog",
   authors: {
-    name: "Satria Bahari",
+    name: "Hamka Zainul Ardhi",
     url: process.env.DOMAIN,
   },
   openGraph: {
     url: process.env.DOMAIN,
-    siteName: "Satria Bahari",
+    siteName: "Hamka Zainul Ardhi",
     locale: "id-ID",
   },
-  exTitle: "| Satria Bahari",
-  profile: "/images/satria.jpg",
+  exTitle: "| Hamka Zainul Ardhi",
+  profile: "/images/hamka.jpg",
 };

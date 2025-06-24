@@ -42,7 +42,14 @@
           "start_date": "2025-01",
           "end_date": null,
           "industry": "Akademik",
-          "link": "#"
+          "link": "#",
+          "responsibilities": {
+            "responsibility_1": "Mengembangkan dan memelihara dashboard pengguna serta sistem Ujian Berbasis Komputer (CBT) untuk platform edukasi perusahaan.",
+            "responsibility_2": "Membangun antarmuka frontend yang interaktif dan responsif menggunakan React.js untuk meningkatkan pengalaman pengguna.",
+            "responsibility_3": "Mengimplementasikan fungsi backend menggunakan CodeIgniter untuk mengelola data pengguna, hasil ujian, dan administrasi sistem.",
+            "responsibility_4": "Berkoordinasi dengan tim lintas divisi untuk memastikan integrasi yang lancar antara frontend dan backend.",
+            "responsibility_5": "Berkontribusi dalam peningkatan performa, keandalan, dan kemudahan pemeliharaan sistem."
+          }
         },
         "career_1": {
           "position": "Frontend Web Developer",
@@ -226,7 +233,7 @@
   "Footer": {
     "hire": "Hire me.",
     "copyright_1": "Hak Cipta © ",
-    "copyright_2": "Satria Bahari. Semua hak dilindungi."
+    "copyright_2": "Hamka. Semua hak dilindungi."
   },
   "LocaleSwitcher": {
     "en": "🇺🇸",

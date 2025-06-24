@@ -42,7 +42,14 @@
           "start_date": "2025-01",
           "end_date": null,
           "industry": "Academic",
-          "link": "#"
+          "link": "#",
+          "responsibilities": {
+            "responsibility_1": "Developed and maintained the user dashboard and Computer-Based Test (CBT) system for the company's educational platform.",
+            "responsibility_2": "Built interactive and responsive frontend interfaces using React.js to enhance user experience.",
+            "responsibility_3": "Implemented backend functionalities using CodeIgniter to manage user data, test results, and system administration.",
+            "responsibility_4": "Coordinated with cross-functional teams to ensure seamless integration between frontend and backend.",
+            "responsibility_5": "Contributed to improving system performance, reliability, and maintainability."
+          }
         },
         "career_1": {
           "position": "Frontend Web Developer",
@@ -225,7 +232,7 @@
   "Footer": {
     "hire": "Hire me.",
     "copyright_1": "COPYRIGHT © ",
-    "copyright_2": "Satria Bahari. All rights reserved."
+    "copyright_2": "Hamka. All rights reserved."
   },
   "LocaleSwitcher": {
     "en": "🇺🇸",

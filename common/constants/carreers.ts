@@ -2,16 +2,23 @@ import { CareerProps } from "../types/careers";
 
 export const CAREERS: CareerProps[] = [
   {
-    position: "Web Developer",
+    position: "Web Developer Intern",
     company: "PT. Presmas Digital Akademik",
     logo: "/images/careers/presmas.png",
-    location: "Central java, Indonesia 🇮🇩",
+    location: "Central Java, Indonesia 🇮🇩",
     location_type: "Onsite",
     type: "Internship",
-    start_date: "2025-1",
+    start_date: "2025-01",
     end_date: null,
-    industry: "academy",
+    industry: "EdTech",
     link: "#",
+    responsibilities: [
+      "Developed and maintained a user dashboard and Computer-Based Test (CBT) system as part of the company's educational platform.",
+      "Built interactive and responsive frontend interfaces using React.js to enhance user experience.",
+      "Implemented backend functionalities using CodeIgniter to handle user data, test results, and system management.",
+      "Collaborated with cross-functional teams to ensure seamless integration between frontend and backend systems.",
+      "Contributed to improving system performance, reliability, and maintainability across the platform.",
+    ],
   },
   {
     position: "Frontend Web Developer",

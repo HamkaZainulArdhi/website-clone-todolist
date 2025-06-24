@@ -10,6 +10,10 @@ export const getProjectsData = async () => {
 export const getProjectsDataBySlug = async (slug: string) => {
   const supabase = createClient();
 
-  let { data } = await supabase.from("projects").select().eq("slug", slug).single();
+  let { data } = await supabase
+    .from("projects")
+    .select()
+    .eq("slug", slug)
+    .single();
   return data;
 };
