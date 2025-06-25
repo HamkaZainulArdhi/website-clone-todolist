@@ -19,7 +19,7 @@ const ChatList = ({ messages, isWidget = false }: ChatListProps) => {
     <div
       ref={messagesContainerRef}
       className={`flex flex-col gap-4 overflow-y-auto overflow-x-hidden scroll-smooth ${
-        isWidget ? "max-h-70 p-3" : "h-[calc(100vh-308px)] px-4 py-2"
+        isWidget ? "max-h-[400px] p-3" : "h-[calc(100vh-308px)] px-4 py-2"
       }`}
     >
       {messages.length === 0 && (
