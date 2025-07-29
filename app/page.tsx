@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "Hamka Zainul Ardhi",
     images: [
       {
-        url: `${process.env.DOMAIN}/hamka.jpg`,
+        url: `${process.env.DOMAIN}/https://opengraph.b-cdn.net/production/images/e5246e42-cb5c-4c32-9581-36c0ed85cad1.jpg?token=Wsl4BwH4kMVjG1d5wcp917Bdb0BSEe5wT8hL55itNN4&height=1500&width=1200&expires=33289760339`,
         width: 1200,
         height: 630,
         alt: "Hamka Zainul Ardhi - Personal Site Preview",
@@ -30,7 +30,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hamka Zainul Ardhi | Portofolio Developer",
     description: "Yuk kenal lebih dekat dengan Hamka dan proyeknya!",
-    images: [`${process.env.DOMAIN}/hamka.jpg`],
+    images: [
+      `${process.env.DOMAIN}/https://opengraph.b-cdn.net/production/images/e5246e42-cb5c-4c32-9581-36c0ed85cad1.jpg?token=Wsl4BwH4kMVjG1d5wcp917Bdb0BSEe5wT8hL55itNN4&height=1500&width=1200&expires=33289760339`,
+    ],
   },
 };
 

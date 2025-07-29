@@ -4,5 +4,6 @@ module.exports = {
   generateRobotsTxt: true,
   changefreq: "monthly",
   priority: 0.7,
+  outDir: "./public",
   sitemapSize: 7000,
 };
