@@ -3,7 +3,7 @@ import { BsFillBootstrapFill } from "react-icons/bs";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { FaNpm } from "react-icons/fa6";
 import {
-  SiCss3,
+  SiCss,
   SiExpress,
   SiFramer,
   SiGithub,
@@ -44,7 +44,7 @@ const iconSize = 22;
 
 export const STACKS: SkillProps = {
   HTML: <SiHtml5 size={iconSize} className="text-orange-500" />,
-  CSS: <SiCss3 size={iconSize} className="text-blue-500" />,
+  CSS: <SiCss size={iconSize} className="text-blue-500" />,
   Bootstrap: (
     <BsFillBootstrapFill size={iconSize} className="text-violet-600" />
   ),
