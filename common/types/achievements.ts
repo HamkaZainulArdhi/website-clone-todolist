@@ -1,13 +1,17 @@
 export interface AchievementItem {
-  id: number;
-  credential_id?: string;
-  slug?: string;
+  id: string;
+  credential_id?: string | null;
   name: string;
   issuing_organization: string;
-  category?: string;
-  url_credential: string;
+  category: string;
   issue_date: string;
-  expiration_date?: string;
+  expiration_date?: string | null;
   image: string;
-  is_show?: boolean;
+  is_show: boolean;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+export interface AchievementItemWithCredential extends AchievementItem {
+  url_credential: string;
 }

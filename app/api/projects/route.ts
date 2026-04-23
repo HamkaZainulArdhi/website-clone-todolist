@@ -4,7 +4,7 @@ import { getProjectsData } from "@/services/projects";
 
 export const GET = async () => {
   try {
-    const data = await getProjectsData();
+    const data = getProjectsData();
     return NextResponse.json(data, { status: 200 });
   } catch (error) {
     return NextResponse.json(

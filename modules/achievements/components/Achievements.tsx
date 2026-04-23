@@ -1,72 +1,57 @@
 "use client";
 
-import useSWR from "swr";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
+import { useMemo } from "react";
 
 import EmptyState from "@/common/components/elements/EmptyState";
-import { AchievementItem } from "@/common/types/achievements";
-import { fetcher } from "@/services/fetcher";
+import { AchievementItemWithCredential } from "@/common/types/achievements";
+import { getAchievementsData } from "@/services/achievements";
 
 import AchievementCard from "./AchievementCard";
-import AchievementSkeleton from "./AchievementSkeleton";
 import FilterHeader from "./FilterHeader";
-import { useState } from "react";
 
 const Achievements = () => {
   const t = useTranslations("AchievementsPage");
-
   const params = useSearchParams();
-  const [filter, setFilter] = useState({
-    category: params.get("category") || "",
-    search: params.get("search") || "",
-  });
+
   const category = params.get("category");
   const search = params.get("search");
 
-  let apiUrl = "/api/achievements";
+  // Get filtered achievements using local data
+  const filteredAchievements: AchievementItemWithCredential[] = useMemo(() => {
+    const data = getAchievementsData({
+      category: category || undefined,
+      search: search || undefined,
+    });
 
-  const queryParams = new URLSearchParams();
-  if (category) queryParams.append("category", category);
-  if (search) queryParams.append("search", search);
-
-  if (queryParams.toString()) {
-    apiUrl += `?${queryParams.toString()}`;
-  }
-
-  const { data, isLoading, error } = useSWR(apiUrl, fetcher);
-
-  const filteredAchievements: AchievementItem[] = data
-    ?.filter(
-      (item: AchievementItem) =>
-        item?.is_show &&
-        (!category || item?.category?.toLowerCase() === category.toLowerCase()),
-    )
-    .sort((a: AchievementItem, b: AchievementItem) => b.id - a.id);
+    // Sort by ID in descending order
+    return data.sort((a, b) => {
+      const aId = parseInt(a.id.replace(/\D/g, ""), 10) || 0;
+      const bId = parseInt(b.id.replace(/\D/g, ""), 10) || 0;
+      return bId - aId;
+    });
+  }, [category, search]);
 
   return (
     <section className="space-y-4">
-      <FilterHeader totalData={data?.length} />
-
-      {isLoading && <AchievementSkeleton />}
-
-      {error && <EmptyState message={t("error")} />}
+      <FilterHeader totalData={filteredAchievements?.length} />
 
       {filteredAchievements?.length === 0 && (
         <EmptyState message={t("no_data")} />
       )}
 
-      {!isLoading && !error && filteredAchievements.length !== 0 && (
+      {filteredAchievements.length !== 0 && (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           {filteredAchievements?.map((item, index) => (
             <motion.div
-              key={index}
+              key={item.id}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
             >
-              <AchievementCard key={index} {...item} />
+              <AchievementCard {...item} />
             </motion.div>
           ))}
         </div>
