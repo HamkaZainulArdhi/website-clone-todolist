@@ -7,8 +7,8 @@ import { useState } from "react";
 import { BsBuildings as CompanyIcon } from "react-icons/bs";
 import { HiChevronRight as ChevronIcon } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
-import { useLocale } from "next-intl";
-import { useTranslations } from "use-intl";
+import { useLocale, useTranslations } from "next-intl";
+
 import { differenceInMonths, differenceInYears, format } from "date-fns";
 
 import Card from "@/common/components/elements/Card";
